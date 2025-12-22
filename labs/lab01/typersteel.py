@@ -1,20 +1,23 @@
 import typer
+import sys
 
 
-def main(
-    name: str,
-    lastname: str = typer.Option("", help="Фамилия пользователя."),
-    formal: bool = typer.Option(
-        False, "--formal", "-f", help="Использовать формальное приветствие."
-    ),
-):
+def main():
     """
-    Говорит "Привет" пользователю, опционально используя фамилию и формальный стиль.
+    Говорит "Hello appsec world" пользователю, запрашивая имя интерактивно.
     """
-    if formal:
-        print(f"Добрый день, {name} {lastname}!")
+    v = sys.version_info[0]
+    
+    if v == 3:
+        name = input("Enter your name: ").strip()
+    elif v == 2:
+        # Python 2 (хоть и устарел, но для совместимости)
+        name = raw_input("Enter your name: ").strip()
     else:
-        print(f"Привет, {name}!")
+        print("Unknown Python version")
+        return
+    
+    print(f"Hello appsec world from {name}")
 
 
 if __name__ == "__main__":
