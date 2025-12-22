@@ -209,7 +209,9 @@ Host is up (0.000081s latency).
 All 1000 scanned ports on localhost (127.0.0.1) are closed
 
 Nmap done: 1 IP address (1 host up) scanned in 0.06 seconds
+```
 
+```bash
 $ nmap -sC localhost
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap -sC localhost
@@ -219,8 +221,9 @@ Host is up (0.000063s latency).
 All 1000 scanned ports on localhost (127.0.0.1) are closed
 
 Nmap done: 1 IP address (1 host up) scanned in 0.34 seconds
+```
 
-
+```bash
 $ nmap -p localhost
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap -p 8080 localhost
@@ -232,8 +235,9 @@ PORT     STATE  SERVICE
 8080/tcp closed http-proxy
 
 Nmap done: 1 IP address (1 host up) scanned in 0.03 seconds
+```
 
-
+```bash
 $ nmap -O localhost
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% sudo nmap -O localhost
@@ -246,8 +250,9 @@ Network Distance: 0 hops
 
 OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 1.68 seconds
+```
 
-
+```bash
 $ nmap -p 80 localhost
 $ nmap -p 443 localhost
 
@@ -260,7 +265,9 @@ PORT    STATE  SERVICE
 443/tcp closed https
 
 Nmap done: 1 IP address (1 host up) scanned in 0.03 seconds
+```
 
+```bash
 $ nmap -p 8443 localhost
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap -p 8443 localhost
@@ -272,7 +279,9 @@ PORT     STATE  SERVICE
 8443/tcp closed https-alt
 
 Nmap done: 1 IP address (1 host up) scanned in 0.03 seconds
+```
 
+```bash
 $ nmap -p "*" localhost
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap -p "*" localhost
@@ -282,8 +291,9 @@ Host is up (0.000066s latency).
 All 8320 scanned ports on localhost (127.0.0.1) are closed
 
 Nmap done: 1 IP address (1 host up) scanned in 0.13 seconds
+```
 
-
+```bash
 $ nmap -sV -p 22,8080 localhost
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap -sV -p 22,8080 localhost
@@ -297,20 +307,26 @@ PORT     STATE  SERVICE    VERSION
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 0.33 seconds
+```
 
+```bash
 $ nmap -sP 192.168.1.0/24
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap -sP 192.168.1.0/24
 Starting Nmap 7.80 ( https://nmap.org ) at 2025-12-15 18:49 MSK
 Nmap done: 256 IP addresses (0 hosts up) scanned in 103.23 seconds
+```
 
+```bash
 $ nmap --open 192.168.1.1
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap --open 192.168.1.1
 Starting Nmap 7.80 ( https://nmap.org ) at 2025-12-15 18:51 MSK
 Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
 Nmap done: 1 IP address (0 hosts up) scanned in 3.04 seconds
+```
 
+```bash
 $ nmap --packet-trace 192.168.1.1
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap --open 192.168.1.1
@@ -325,7 +341,9 @@ CONN (2.0346s) TCP localhost > 192.168.1.1:443 => Operation now in progress
 CONN (2.0348s) TCP localhost > 192.168.1.1:80 => Operation now in progress
 Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
 Nmap done: 1 IP address (0 hosts up) scanned in 3.04 seconds
+```
 
+```bash
 $ nmap --packet-trace scanme.nmap.org 
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap --packet-trace scanme.nmap.org
@@ -344,8 +362,9 @@ NSOCK INFO [0.5190s] nsock_trace_handler_callback(): Callback: CONNECT SUCCESS f
 NSOCK INFO [0.5190s] nsock_trace_handler_callback(): Callback: WRITE SUCCESS for EID 43 [1.1.1.1:53]
 NSOCK INFO [0.5190s] nsock_trace_handler_callback(): Callback: CONNECT SUCCESS for EID 24 [8.8.8.8:53]
 NSOCK INFO [0.8980s] nsock_trace_handler_callback(): Callback: READ SUCCESS for EID 18 [1.1.1.1:53] (72 bytes): .e...........156.32.33.45.in-addr.arpa..............,...scanme.nmap.org.
+```
 
-
+```bash
 $ nmap --iflist
 
 
@@ -367,8 +386,9 @@ DST/MASK                     DEV  METRIC GATEWAY
 fe80::215:5dff:fe8d:1bb7/128 eth0 0
 fe80::/64                    eth0 256
 ff00::/8                     eth0 256
+```
 
-
+```bash
 $ nmap -iL scanme.nmap.org 
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap -iL exmp_targets.txt
@@ -378,7 +398,9 @@ Host is up (0.000075s latency).
 All 1000 scanned ports on localhost (127.0.0.1) are closed
 
 Nmap done: 4 IP addresses (1 host up) scanned in 1.26 seconds
+```
 
+```bash
 $ nmap -A -iL scanme.nmap.org
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03%  nmap -A -iL exmp_targets.txt
@@ -389,7 +411,9 @@ All 1000 scanned ports on localhost (127.0.0.1) are closed
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 4 IP addresses (1 host up) scanned in 1.67 seconds
+```
 
+```bash
 $ nmap -sA scanme.nmap.org
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% sudo nmap -sA scanme.nmap.org
@@ -400,8 +424,9 @@ Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2
 All 1000 scanned ports on scanme.nmap.org (45.33.32.156) are filtered
 
 Nmap done: 1 IP address (1 host up) scanned in 19.00 seconds
+```
 
-
+```bash
 $ nmap -PN scanme.nmap.org 
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap -PN scanme.nmap.org
@@ -418,7 +443,9 @@ PORT      STATE SERVICE
 31337/tcp open  Elite
 
 Nmap done: 1 IP address (1 host up) scanned in 22.18 seconds
+```
 
+```bash
 $ nmap --script=vuln IP_addr -vv
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap --script=vuln IP_addr -vv
@@ -442,8 +469,9 @@ Completed NSE at 18:57, 0.00s elapsed
 Read data files from: /usr/bin/../share/nmap
 WARNING: No targets were specified, so 0 hosts scanned.
 Nmap done: 0 IP addresses (0 hosts up) scanned in 10.41 seconds
+```
 
-
+```bash
 $ nmap -sV --script vuln -oN nmapres_new.txt localhost
 
 acher@LAPTOP-G8JP4BBC:~/course_labs/labs/lab03% nmap -sV --script vuln -oN nmapres_new.txt localhost
@@ -454,7 +482,9 @@ All 1000 scanned ports on localhost (127.0.0.1) are closed
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 10.54 seconds
+```
 
+```bash
 $ cat > ./nmapres_new.txt # сделать подобный пример файлу exmp_targets.txt
 $ grep "VULNERABLE" nmapres_new.txt
 
@@ -471,12 +501,12 @@ PORT     STATE  SERVICE    VERSION
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 10.45 seconds
+```
 
+```bash
 $ xsltproc ~/project/reports/nmapres_new.xml -o ~/project/reports/nmapres_new.html
 
 <img width="1588" height="1288" alt="image" src="https://gist.github.com/user-attachments/assets/a7b60f89-765d-4e02-b080-5f8a50a013c5" />
-
-
 ```
 
 - [x] 3. Используйте команду `tree` и выведите все вложенные файлы по директориям.
